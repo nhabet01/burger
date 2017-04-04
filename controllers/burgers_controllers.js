@@ -10,7 +10,7 @@ var burger = require('../models/burger.js');
 //and controller sends the data to be rendered (in this case to handlebars)
 router.get('/', function(req,res){
     burger.selectAll(function(burger_data){
-        console.log(burger_data);
+        // console.log(burger_data);
         var hbsObject ={
             burgers: burger_data
         };
