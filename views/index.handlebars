@@ -38,6 +38,7 @@
             <h3>Come and Get It!</h3>
             <ul> 
                 {{#each burgers}}
+                {{!-- #unless acts like "if false"...so, if devoured = false (tried !this.devoured but didn't work) --}}
                     {{#unless this.devoured}}
                     <div >
                         <h4 class="well">{{this.burger_name}}</h4>                  
@@ -56,6 +57,7 @@
             <ul> 
             {{#each burgers}}
                 {{#if this.devoured}}
+                {{!-- checks if devoured = true --}}
                 <h4 class="well">{{this.burger_name}}<h4>
                 {{/if}}
             {{/each}}
